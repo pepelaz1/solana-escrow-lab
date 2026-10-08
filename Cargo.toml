@@ -1,0 +1,20 @@
+[package]
+name = "solana-escrow-lab"
+version = "0.1.0"
+edition = "2021"
+[lib]
+path = "lib.rs"
+crate-type = ["cdylib", "lib"]
+[[bin]]
+name = "escrow-demo"
+path = "main.rs"
+[features]
+default = ["solana"]
+solana = ["dep:solana-program"]
+no-entrypoint = []
+custom-heap = []
+custom-panic = []
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+solana-program = { version = "=2.2.0", optional = true }

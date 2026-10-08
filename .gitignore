@@ -1,0 +1,12 @@
+__pycache__/
+*.sqlite3*
+.env
+.venv/
+node_modules/
+target/
+bin/
+obj/
+generated/
+*.log
+test-*.db*
+*-keypair.json
